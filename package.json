@@ -1,7 +1,7 @@
 {
-  "name": "vue-quizapp",
+  "name": "game-of-life",
   "version": "1.0.0",
-  "description": "a quizapp ",
+  "description": "a simple tool to simulate game of life ",
   "author": "erkanerol <erkanerol92@gmail.com>",
   "private": true,
   "scripts": {

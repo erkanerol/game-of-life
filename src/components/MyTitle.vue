@@ -10,7 +10,7 @@
 export default {
   data () {
     return {
-      msg: 'A Simple Quiz App'
+      msg: 'Game of Life'
     }
   },
   name: 'my-title'

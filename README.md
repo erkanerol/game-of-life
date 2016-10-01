@@ -1,6 +1,6 @@
-# vue-quizapp
+# game-of-life
 
-> a quizapp 
+> a simple tool to simulate game of life
 
 ## Build Setup
 
