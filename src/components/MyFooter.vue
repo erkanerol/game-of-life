@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ msg }}</p>
+    <p>{{ msg }} <a v-bind:href="blog">{{user}}</a></p>
   </div>
 </template>
 
@@ -8,7 +8,9 @@
 export default {
   data () {
     return {
-      msg: 'coded by @erkanerol'
+      msg: 'coded by ',
+      user: '@erkanerol',
+      blog: 'https://erkanerol.github.io/'
     }
   },
   name: 'my-footer'

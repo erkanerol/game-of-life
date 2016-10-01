@@ -7,21 +7,22 @@
               v-on:click="myclick(rowIndex,columnIndex)">
           </div>
         </div>
+        <br/>
         <button id="next" v-on:click="next" :disabled="isPlaying">Next</button>
         <button id="start" v-on:click="start" :disabled="isPlaying">Start</button>
         <button id="stop" v-on:click="stop" :disabled="!isPlaying">Stop</button>
-        <br/>
+        <br/><br/>
 
         <button id="deleteColumn" v-on:click="deleteColumn" :disabled="isPlaying">-</button>
         <p>Column</p>
         <button id="addColumn" v-on:click="addColumn" :disabled="isPlaying">+</button>
 
 
-      <br/>
+        <br/><br/>
 
-      <button id="deleteRow" v-on:click="deleteRow" :disabled="isPlaying">-</button>
-      <p>Row</p>
-      <button id="addRow" v-on:click="addRow" :disabled="isPlaying">+</button>
+        <button id="deleteRow" v-on:click="deleteRow" :disabled="isPlaying">-</button>
+        <p>Row</p>
+        <button id="addRow" v-on:click="addRow" :disabled="isPlaying">+</button>
 
     </div>
   </div>
