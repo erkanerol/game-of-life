@@ -1,4 +1,7 @@
+import {neighbors} from './constants'
+
 export class Game {
+
   constructor (row, column) {
     this.row = row
     this.column = column
@@ -22,7 +25,31 @@ export class Game {
     return newMatrix
   }
 
+  getNumberOfLiveNeighbours (i, k) {
+    var count = 0
+    for (let n of neighbors) {
+      if (i + n[0] > 0 && i + n[0] < this.row) {
+        if (k + n[1] > 0 && k + n[1] < this.column) {
+          count += this.matrix[i + n[0]][k + n[1]]
+        }
+      }
+    }
+    return count
+  }
+
   getNextValueOfCell (i, k) {
-    return 1 - this.matrix[i][k]
+    var numberOfLiveNeighbours = this.getNumberOfLiveNeighbours(i, k)
+    if (this.matrix[i][k] === 0) {
+      if (numberOfLiveNeighbours === 3) {
+        return 1
+      }
+    } else {
+      if (numberOfLiveNeighbours < 2) {
+        return 0
+      } else if (numberOfLiveNeighbours > 3) {
+        return 0
+      }
+    }
+    return this.matrix[i][k]
   }
 }

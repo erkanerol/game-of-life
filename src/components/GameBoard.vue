@@ -25,7 +25,6 @@ export default {
   },
   methods: {
     myclick: function (rowIndex, columnIndex) {
-      console.log(rowIndex + ' ' + columnIndex)
       Vue.set(this.game.matrix[rowIndex], columnIndex, 1 - this.game.matrix[rowIndex][columnIndex])
     },
     next: function () {
