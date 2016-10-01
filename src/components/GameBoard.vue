@@ -8,6 +8,19 @@
           </div>
         </div>
         <button id="next" v-on:click="next">Next</button>
+        <br/>
+
+        <button id="deleteColumn" v-on:click="deleteColumn">-</button>
+        <p>Column</p>
+        <button id="addColumn" v-on:click="addColumn">+</button>
+
+
+      <br/>
+
+      <button id="deleteRow" v-on:click="deleteRow">-</button>
+      <p>Row</p>
+      <button id="addRow" v-on:click="addRow">+</button>
+
     </div>
   </div>
 </template>
@@ -29,6 +42,18 @@ export default {
     },
     next: function () {
       Vue.set(this.game, 'matrix', this.game.next())
+    },
+    addColumn: function () {
+      this.game.addColumn()
+    },
+    addRow: function () {
+      this.game.addRow()
+    },
+    deleteColumn: function () {
+      this.game.deleteColumn()
+    },
+    deleteRow: function () {
+      this.game.deleteRow()
     }
   },
   name: 'game-board'
@@ -38,9 +63,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 p {
-  color: #b90b14;
+  display: inline;
 }
-
 .row {
   display: block;
 }

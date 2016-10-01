@@ -24,7 +24,6 @@ export class Game {
     }
     return newMatrix
   }
-
   getNumberOfLiveNeighbours (i, k) {
     var count = 0
     for (let n of neighbors) {
@@ -36,7 +35,6 @@ export class Game {
     }
     return count
   }
-
   getNextValueOfCell (i, k) {
     var numberOfLiveNeighbours = this.getNumberOfLiveNeighbours(i, k)
     if (this.matrix[i][k] === 0) {
@@ -51,5 +49,33 @@ export class Game {
       }
     }
     return this.matrix[i][k]
+  }
+  addColumn () {
+    for (var i = 0; i < this.row; ++i) {
+      this.matrix[i].push(0)
+    }
+    this.column++
+    return this.matrix
+  }
+  addRow () {
+    var newRow = new Array(this.column)
+    for (var k = 0; k < this.column; ++k) {
+      newRow[k] = 0
+    }
+    this.matrix.push(newRow)
+    this.row++
+    return this.matrix
+  }
+  deleteColumn () {
+    for (var i = 0; i < this.row; ++i) {
+      this.matrix[i].pop()
+    }
+    this.column--
+    return this.matrix
+  }
+  deleteRow () {
+    this.matrix.pop()
+    this.row--
+    return this.matrix
   }
 }

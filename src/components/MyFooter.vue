@@ -8,7 +8,7 @@
 export default {
   data () {
     return {
-      msg: 'Coded by @erkanerol'
+      msg: 'coded by @erkanerol'
     }
   },
   name: 'my-footer'
