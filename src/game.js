@@ -27,8 +27,8 @@ export class Game {
   getNumberOfLiveNeighbours (i, k) {
     var count = 0
     for (let n of neighbors) {
-      if (i + n[0] > 0 && i + n[0] < this.row) {
-        if (k + n[1] > 0 && k + n[1] < this.column) {
+      if (i + n[0] >= 0 && i + n[0] < this.row) {
+        if (k + n[1] >= 0 && k + n[1] < this.column) {
           count += this.matrix[i + n[0]][k + n[1]]
         }
       }
