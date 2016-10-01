@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <my-title></my-title>
-    <p>
-      Welcome to your Vue.js app!
-    </p>
+    <game-board></game-board>
     <my-footer></my-footer>
   </div>
 </template>
@@ -11,10 +9,11 @@
 <script>
 import MyTitle from './components/MyTitle'
 import MyFooter from './components/MyFooter'
+import GameBoard from './components/GameBoard'
 
 export default {
   components: {
-    MyTitle, MyFooter
+    MyTitle, MyFooter, GameBoard
   }
 }
 </script>
