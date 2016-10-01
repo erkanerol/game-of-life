@@ -7,6 +7,7 @@
               v-on:click="myclick(rowIndex,columnIndex)">
           </div>
         </div>
+        <button id="next" v-on:click="next">Next</button>
     </div>
   </div>
 </template>
@@ -26,6 +27,9 @@ export default {
     myclick: function (rowIndex, columnIndex) {
       console.log(rowIndex + ' ' + columnIndex)
       Vue.set(this.game.matrix[rowIndex], columnIndex, 1 - this.game.matrix[rowIndex][columnIndex])
+    },
+    next: function () {
+      Vue.set(this.game, 'matrix', this.game.next())
     }
   },
   name: 'game-board'
@@ -54,5 +58,10 @@ p {
 
 .death{
   background: #ccde44;
+}
+
+#next{
+  width: 50px;
+  height: 20px;
 }
 </style>
