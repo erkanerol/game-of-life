@@ -2,6 +2,8 @@
 
 > a simple tool to simulate game of life
 
+![screen shot](https://github.com/erkanerol/game-of-life/blob/master/screenshot.gif)
+
 ## Build Setup
 
 ``` bash
